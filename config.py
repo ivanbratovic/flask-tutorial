@@ -9,6 +9,7 @@ class Config:
         "DATABASE_URL"
     ) or "sqlite:///" + os.path.join(basedir, "app.db")
     POSTS_PER_PAGE = 25
+    LANGUAGES = ["en", "hr"]
 
     # Mail settings
     MAIL_SERVER = os.environ.get("MAIL_SERVER")
