@@ -29,7 +29,7 @@ if not app.debug:
             mailhost=(app.config["MAIL_SERVER"], app.config["MAIL_PORT"]),
             fromaddr="no-reply@" + app.config["MAIL_SERVER"],
             toaddrs=app.config["ADMINS"],
-            subject="Flask Blog Failure",
+            subject="Blog Failure",
             credentials=auth,
             secure=secure,
         )
