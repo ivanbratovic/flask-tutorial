@@ -1,12 +1,14 @@
-from werkzeug.security import generate_password_hash, check_password_hash
-from datetime import datetime, timezone
-from typing import Optional
 import sqlalchemy as sa
 import sqlalchemy.orm as so
-from app import db, login
+import jwt
+from app import db, login, app
 from flask_login import UserMixin
+from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime, timezone
+from time import time
+from typing import Optional
 from hashlib import md5
-
+from jwt.exceptions import PyJWTError
 
 users_followers = sa.Table(
     "users_followers",
@@ -82,9 +84,25 @@ class User(UserMixin, db.Model):
         )
 
     def avatar(self, size):
-        print(self.email.lower())
         digest = md5(self.email.lower().encode("utf-8")).hexdigest()
         return f"https://www.gravatar.com/avatar/{digest}?d=identicon&s={size}"
+
+    def get_reset_password_token(self, expires_in=600):
+        return jwt.encode(
+            {"reset_password": self.id, "exp": time() + expires_in},
+            app.config["SECRET_KEY"],
+            algorithm="HS256",
+        )
+
+    @staticmethod
+    def verify_password_reset_token(token):
+        try:
+            user_id = jwt.decode(token, app.config["SECRET_KEY"], algorithms=["HS256"])[
+                "reset_password"
+            ]
+        except PyJWTError:
+            return None
+        return db.session.get(User, user_id)
 
     def __repr__(self):
         return f"<User {self.username}>"
