@@ -4,8 +4,10 @@
 {% block content %}
     <h1>{{ _('Hi, %(username)s!', username=current_user.username) }}</h1>
     {% if form %}
+    <hr/>
     {{ wtf.quick_form(form) }}
     {% endif %}
+    <hr/>
     {% for post in posts %}
         {% include '_post.html' %}
     {% endfor %}

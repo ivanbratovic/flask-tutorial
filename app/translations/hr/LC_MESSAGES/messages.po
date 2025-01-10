@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ivanbratovic4@gmail.com\n"
-"POT-Creation-Date: 2025-01-07 17:22+0100\n"
+"POT-Creation-Date: 2025-01-10 10:47+0100\n"
 "PO-Revision-Date: 2025-01-07 16:54+0100\n"
 "Last-Translator: Ivan Bratović <ivanbratovic4@gmail.com>\n"
 "Language: hr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: app/__init__.py:29
+#: app/__init__.py:28
 msgid "Please log in to access this page."
 msgstr "Prijavite se kako biste pristupili ovoj stranici."
 
@@ -39,7 +39,7 @@ msgstr "Lozinka"
 msgid "Remember me"
 msgstr "Zapamti me"
 
-#: app/forms.py:14 app/routes.py:99
+#: app/forms.py:14 app/routes.py:105
 msgid "Sign in"
 msgstr "Prijavi se"
 
@@ -51,7 +51,7 @@ msgstr "E-pošta"
 msgid "Repeat Password"
 msgstr "Ponovite lozinku"
 
-#: app/forms.py:24 app/routes.py:120
+#: app/forms.py:24 app/routes.py:126
 msgid "Register"
 msgstr "Registriraj se"
 
@@ -87,70 +87,87 @@ msgstr "Podnesi"
 msgid "Request password reset"
 msgstr "Ponovno postavljanje lozinke"
 
-#: app/forms.py:76 app/routes.py:136
+#: app/forms.py:76 app/routes.py:142
 msgid "Reset password"
 msgstr "Ponovno postavi lozinku"
 
-#: app/routes.py:38
+#: app/routes.py:44
 msgid "Your post is now live!"
 msgstr "Vaša objava je sada aktivna!"
 
-#: app/routes.py:54 app/templates/base.html:27
+#: app/routes.py:60 app/templates/base.html:27
 msgid "Home"
 msgstr "Početna stranica"
 
-#: app/routes.py:75 app/templates/base.html:30
+#: app/routes.py:81 app/templates/base.html:30
 msgid "Explore"
 msgstr "Istraži"
 
-#: app/routes.py:92
+#: app/routes.py:98
 msgid "Invalid username or password"
 msgstr "Nevaljano korisničko ime ili lozinka"
 
-#: app/routes.py:118
+#: app/routes.py:124
 msgid "Thank you for registering! You can now login."
 msgstr "Hvala na registraciji! Sada se možete prijaviti."
 
-#: app/routes.py:133
+#: app/routes.py:139
 msgid "Check your e-mail for instructions on how to reset your password."
 msgstr "Provjerite svoju e-poštu za upute kako poništiti lozinku."
 
-#: app/routes.py:150
+#: app/routes.py:156
 msgid "Your password has been reset. You can log in with your new password."
 msgstr ""
 "Vaša nova lozinka je postavljena. Možete se prijaviti svojom novom "
 "lozinkom."
 
-#: app/routes.py:194
+#: app/routes.py:200
 msgid "User profile updated successfully."
 msgstr "Korisnički profil je uspješno ažuriran."
 
-#: app/routes.py:199 app/templates/edit_profile.html:5
+#: app/routes.py:205 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "Uredi profil"
 
-#: app/routes.py:209 app/routes.py:229
+#: app/routes.py:215 app/routes.py:235
 #, python-format
 msgid "User %(username)s not found."
 msgstr "Korisnik %(username)s nije pronađen."
 
-#: app/routes.py:212
+#: app/routes.py:218
 msgid "You cannot follow yourself!"
 msgstr "Ne možete pratiti sebe!"
 
-#: app/routes.py:216
+#: app/routes.py:222
 #, fuzzy, python-format
 msgid "You are following %(username)s!"
 msgstr "Sada pratite korisnika %(username)s!"
 
-#: app/routes.py:232
+#: app/routes.py:238
 msgid "You cannot unfollow yourself!"
 msgstr "Ne možete prestati pratiti sebe!"
 
-#: app/routes.py:236
+#: app/routes.py:242
 #, python-format
 msgid "You unfollowed %(username)s."
 msgstr "Prestali ste pratiti korisnika %(username)s."
+
+#: app/translate.py:10
+msgid "Error: the translation service is not configured."
+msgstr "Greška: servis za prevođenje nije konfiguriran."
+
+#: app/translate.py:18
+msgid "Error: translation service failed."
+msgstr "Greška: neuspješan poziv servisa za prevođenje."
+
+#: app/translate.py:36
+#, python-format
+msgid "Recieved response: %(code)d"
+msgstr "Primljen odgovor: %(code)d"
+
+#: app/translate.py:41
+msgid "Google Translate is not implemented"
+msgstr "Usluga Google Translate nije implementirana"
 
 #: app/templates/404.html:4
 msgid "Not Found"
@@ -172,6 +189,10 @@ msgstr "Administrator je obaviješten. Ispričavamo se zbog neugodnosti!"
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s objavljuje %(when)s"
+
+#: app/templates/_post.html:25
+msgid "Translate"
+msgstr "Prevedi"
 
 #: app/templates/base.html:9
 msgid "Welcome to My Blog"
@@ -198,11 +219,11 @@ msgstr "Ponovno postavi lozinku"
 msgid "Hi, %(username)s!"
 msgstr "Bok, %(username)s!"
 
-#: app/templates/index.html:16 app/templates/user.html:41
+#: app/templates/index.html:18 app/templates/user.html:41
 msgid "Newer posts"
 msgstr "Novije objave"
 
-#: app/templates/index.html:21 app/templates/user.html:46
+#: app/templates/index.html:23 app/templates/user.html:46
 msgid "Older posts"
 msgstr "Starije objave"
 

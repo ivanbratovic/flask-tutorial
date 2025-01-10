@@ -10,3 +10,5 @@ pyjwt
 flask-moment
 flask-babel
 black
+langdetect
+requests

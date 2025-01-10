@@ -10,6 +10,9 @@ class Config:
     ) or "sqlite:///" + os.path.join(basedir, "app.db")
     POSTS_PER_PAGE = 25
     LANGUAGES = ["en", "hr"]
+    MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY') or ""
+    GOOG_TRANSLATOR_KEY = os.environ.get('GOOG_TRANSLATOR_KEY') or ""
+
 
     # Mail settings
     MAIL_SERVER = os.environ.get("MAIL_SERVER")
