@@ -70,6 +70,9 @@ instance/
 .webassets-cache
 *.db
 
+# Logger files
+*.log.*
+
 # Scrapy stuff:
 .scrapy
 

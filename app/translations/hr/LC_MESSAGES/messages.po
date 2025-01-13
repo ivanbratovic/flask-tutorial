@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ivanbratovic4@gmail.com\n"
-"POT-Creation-Date: 2025-01-10 10:47+0100\n"
+"POT-Creation-Date: 2025-01-13 16:57+0100\n"
 "PO-Revision-Date: 2025-01-07 16:54+0100\n"
 "Last-Translator: Ivan Bratović <ivanbratovic4@gmail.com>\n"
 "Language: hr\n"
@@ -19,171 +19,196 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: app/__init__.py:28
+#: app/__init__.py:22
 msgid "Please log in to access this page."
 msgstr "Prijavite se kako biste pristupili ovoj stranici."
-
-#: app/email.py:23
-msgid "[Flask Blog] Reset your password"
-msgstr "[Flask Blog] Ponovno postavite lozinku"
-
-#: app/forms.py:11 app/forms.py:18 app/forms.py:38
-msgid "Username"
-msgstr "Korisničko ime"
-
-#: app/forms.py:12 app/forms.py:20 app/forms.py:72
-msgid "Password"
-msgstr "Lozinka"
-
-#: app/forms.py:13
-msgid "Remember me"
-msgstr "Zapamti me"
-
-#: app/forms.py:14 app/routes.py:105
-msgid "Sign in"
-msgstr "Prijavi se"
-
-#: app/forms.py:19 app/forms.py:67
-msgid "E-mail"
-msgstr "E-pošta"
-
-#: app/forms.py:22 app/forms.py:74
-msgid "Repeat Password"
-msgstr "Ponovite lozinku"
-
-#: app/forms.py:24 app/routes.py:126
-msgid "Register"
-msgstr "Registriraj se"
-
-#: app/forms.py:29 app/forms.py:52
-msgid "Please use a different username."
-msgstr "Koristite neko drugo korisničko ime."
-
-#: app/forms.py:34
-msgid "Please use a different e-mail address."
-msgstr "Koristite neku drugu adresu e-pošte"
-
-#: app/forms.py:39
-msgid "About me"
-msgstr "O meni"
-
-#: app/forms.py:40
-msgid "Update profile"
-msgstr "Ažuriraj profil"
-
-#: app/forms.py:57
-msgid "What's on your mind?"
-msgstr "Što ti je na pameti?"
-
-#: app/forms.py:59
-msgid "Publish post"
-msgstr "Objavi"
-
-#: app/forms.py:63
-msgid "Submit"
-msgstr "Podnesi"
-
-#: app/forms.py:68
-msgid "Request password reset"
-msgstr "Ponovno postavljanje lozinke"
-
-#: app/forms.py:76 app/routes.py:142
-msgid "Reset password"
-msgstr "Ponovno postavi lozinku"
-
-#: app/routes.py:44
-msgid "Your post is now live!"
-msgstr "Vaša objava je sada aktivna!"
-
-#: app/routes.py:60 app/templates/base.html:27
-msgid "Home"
-msgstr "Početna stranica"
-
-#: app/routes.py:81 app/templates/base.html:30
-msgid "Explore"
-msgstr "Istraži"
-
-#: app/routes.py:98
-msgid "Invalid username or password"
-msgstr "Nevaljano korisničko ime ili lozinka"
-
-#: app/routes.py:124
-msgid "Thank you for registering! You can now login."
-msgstr "Hvala na registraciji! Sada se možete prijaviti."
-
-#: app/routes.py:139
-msgid "Check your e-mail for instructions on how to reset your password."
-msgstr "Provjerite svoju e-poštu za upute kako poništiti lozinku."
-
-#: app/routes.py:156
-msgid "Your password has been reset. You can log in with your new password."
-msgstr ""
-"Vaša nova lozinka je postavljena. Možete se prijaviti svojom novom "
-"lozinkom."
-
-#: app/routes.py:200
-msgid "User profile updated successfully."
-msgstr "Korisnički profil je uspješno ažuriran."
-
-#: app/routes.py:205 app/templates/edit_profile.html:5
-msgid "Edit Profile"
-msgstr "Uredi profil"
-
-#: app/routes.py:215 app/routes.py:235
-#, python-format
-msgid "User %(username)s not found."
-msgstr "Korisnik %(username)s nije pronađen."
-
-#: app/routes.py:218
-msgid "You cannot follow yourself!"
-msgstr "Ne možete pratiti sebe!"
-
-#: app/routes.py:222
-#, fuzzy, python-format
-msgid "You are following %(username)s!"
-msgstr "Sada pratite korisnika %(username)s!"
-
-#: app/routes.py:238
-msgid "You cannot unfollow yourself!"
-msgstr "Ne možete prestati pratiti sebe!"
-
-#: app/routes.py:242
-#, python-format
-msgid "You unfollowed %(username)s."
-msgstr "Prestali ste pratiti korisnika %(username)s."
 
 #: app/translate.py:10
 msgid "Error: the translation service is not configured."
 msgstr "Greška: servis za prevođenje nije konfiguriran."
 
-#: app/translate.py:18
+#: app/translate.py:19
 msgid "Error: translation service failed."
 msgstr "Greška: neuspješan poziv servisa za prevođenje."
 
-#: app/translate.py:36
+#: app/translate.py:39
 #, python-format
 msgid "Recieved response: %(code)d"
 msgstr "Primljen odgovor: %(code)d"
 
-#: app/translate.py:41
+#: app/translate.py:44
 msgid "Google Translate is not implemented"
 msgstr "Usluga Google Translate nije implementirana"
 
-#: app/templates/404.html:4
+#: app/auth/email.py:9
+msgid "[Flask Blog] Reset your password"
+msgstr "[Flask Blog] Ponovno postavite lozinku"
+
+#: app/auth/forms.py:11 app/auth/forms.py:18 app/main/forms.py:11
+msgid "Username"
+msgstr "Korisničko ime"
+
+#: app/auth/forms.py:12 app/auth/forms.py:20 app/auth/forms.py:43
+msgid "Password"
+msgstr "Lozinka"
+
+#: app/auth/forms.py:13
+msgid "Remember me"
+msgstr "Zapamti me"
+
+#: app/auth/forms.py:14 app/auth/routes.py:30
+msgid "Sign in"
+msgstr "Prijavi se"
+
+#: app/auth/forms.py:19 app/auth/forms.py:38
+msgid "E-mail"
+msgstr "E-pošta"
+
+#: app/auth/forms.py:22 app/auth/forms.py:45
+msgid "Repeat Password"
+msgstr "Ponovite lozinku"
+
+#: app/auth/forms.py:24 app/auth/routes.py:51
+#: app/auth/templates/register.html:5
+msgid "Register"
+msgstr "Registriraj se"
+
+#: app/auth/forms.py:29 app/main/forms.py:25
+msgid "Please use a different username."
+msgstr "Koristite neko drugo korisničko ime."
+
+#: app/auth/forms.py:34
+msgid "Please use a different e-mail address."
+msgstr "Koristite neku drugu adresu e-pošte"
+
+#: app/auth/forms.py:39
+msgid "Request password reset"
+msgstr "Ponovno postavljanje lozinke"
+
+#: app/auth/forms.py:47 app/auth/routes.py:67
+msgid "Reset password"
+msgstr "Ponovno postavi lozinku"
+
+#: app/auth/routes.py:23
+msgid "Invalid username or password"
+msgstr "Nevaljano korisničko ime ili lozinka"
+
+#: app/auth/routes.py:49
+msgid "Thank you for registering! You can now login."
+msgstr "Hvala na registraciji! Sada se možete prijaviti."
+
+#: app/auth/routes.py:64
+msgid "Check your e-mail for instructions on how to reset your password."
+msgstr "Provjerite svoju e-poštu za upute kako poništiti lozinku."
+
+#: app/auth/routes.py:81
+msgid "Your password has been reset. You can log in with your new password."
+msgstr ""
+"Vaša nova lozinka je postavljena. Možete se prijaviti svojom novom "
+"lozinkom."
+
+#: app/auth/templates/forgot_password.html:5
+msgid "Reset Password"
+msgstr "Ponovno postavi lozinku"
+
+#: app/auth/templates/login.html:5
+msgid "Sign In"
+msgstr "Prijavi se"
+
+#: app/auth/templates/login.html:7
+msgid "New User?"
+msgstr "Novi korisnik?"
+
+#: app/auth/templates/login.html:7
+msgid "Click to Register!"
+msgstr "Registrirajte se ovdje"
+
+#: app/auth/templates/login.html:9
+msgid "Forgot Your Password?"
+msgstr "Zaboravili ste lozinku?"
+
+#: app/auth/templates/login.html:10
+msgid "Click to Reset It"
+msgstr "Resetirajte ju ovdje"
+
+#: app/auth/templates/reset_password.html:5
+msgid "Reset Your Password"
+msgstr "Ponovno postavite Vašu lozinku"
+
+#: app/errors/templates/404.html:4
 msgid "Not Found"
 msgstr "Stranica nije pronađena"
 
-#: app/templates/404.html:5 app/templates/500.html:6
+#: app/errors/templates/404.html:5 app/errors/templates/500.html:6
 msgid "Back"
 msgstr "Povratak"
 
-#: app/templates/500.html:4
+#: app/errors/templates/500.html:4
 msgid "An unexpected error has occurred"
 msgstr "Došlo je do neočekivane pogreške"
 
-#: app/templates/500.html:5
+#: app/errors/templates/500.html:5
 msgid "The administrator has been notified. Sorry for the inconvenience!"
 msgstr "Administrator je obaviješten. Ispričavamo se zbog neugodnosti!"
+
+#: app/main/forms.py:12
+msgid "About me"
+msgstr "O meni"
+
+#: app/main/forms.py:13
+msgid "Update profile"
+msgstr "Ažuriraj profil"
+
+#: app/main/forms.py:30
+msgid "What's on your mind?"
+msgstr "Što ti je na pameti?"
+
+#: app/main/forms.py:32
+msgid "Publish post"
+msgstr "Objavi"
+
+#: app/main/routes.py:35
+msgid "Your post is now live!"
+msgstr "Vaša objava je sada aktivna!"
+
+#: app/main/routes.py:51 app/templates/base.html:27
+msgid "Home"
+msgstr "Početna stranica"
+
+#: app/main/routes.py:72 app/templates/base.html:30
+msgid "Explore"
+msgstr "Istraži"
+
+#: app/main/routes.py:118
+msgid "User profile updated successfully."
+msgstr "Korisnički profil je uspješno ažuriran."
+
+#: app/main/routes.py:123 app/templates/edit_profile.html:5
+msgid "Edit Profile"
+msgstr "Uredi profil"
+
+#: app/main/routes.py:133 app/main/routes.py:152
+#, python-format
+msgid "User %(username)s not found."
+msgstr "Korisnik %(username)s nije pronađen."
+
+#: app/main/routes.py:136
+msgid "You cannot follow yourself!"
+msgstr "Ne možete pratiti sebe!"
+
+#: app/main/routes.py:140
+#, fuzzy, python-format
+msgid "You are following %(username)s!"
+msgstr "Sada pratite korisnika %(username)s!"
+
+#: app/main/routes.py:155
+msgid "You cannot unfollow yourself!"
+msgstr "Ne možete prestati pratiti sebe!"
+
+#: app/main/routes.py:159
+#, python-format
+msgid "You unfollowed %(username)s."
+msgstr "Prestali ste pratiti korisnika %(username)s."
 
 #: app/templates/_post.html:14
 #, python-format
@@ -210,10 +235,6 @@ msgstr "Profil"
 msgid "Logout"
 msgstr "Odjavi se"
 
-#: app/templates/forgot_password.html:5
-msgid "Reset Password"
-msgstr "Ponovno postavi lozinku"
-
 #: app/templates/index.html:5
 #, python-format
 msgid "Hi, %(username)s!"
@@ -226,30 +247,6 @@ msgstr "Novije objave"
 #: app/templates/index.html:23 app/templates/user.html:46
 msgid "Older posts"
 msgstr "Starije objave"
-
-#: app/templates/login.html:5
-msgid "Sign In"
-msgstr "Prijavi se"
-
-#: app/templates/login.html:7
-msgid "New User?"
-msgstr "Novi korisnik?"
-
-#: app/templates/login.html:7
-msgid "Click to Register!"
-msgstr "Registrirajte se ovdje"
-
-#: app/templates/login.html:9
-msgid "Forgot Your Password?"
-msgstr "Zaboravili ste lozinku?"
-
-#: app/templates/login.html:10
-msgid "Click to Reset It"
-msgstr "Resetirajte ju ovdje"
-
-#: app/templates/reset_password.html:5
-msgid "Reset Your Password"
-msgstr "Ponovno postavite Vašu lozinku"
 
 #: app/templates/user.html:8
 msgid "User"
