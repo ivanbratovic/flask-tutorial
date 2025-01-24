@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ivanbratovic4@gmail.com\n"
-"POT-Creation-Date: 2025-01-13 16:57+0100\n"
+"POT-Creation-Date: 2025-01-24 16:13+0100\n"
 "PO-Revision-Date: 2025-01-07 16:54+0100\n"
 "Last-Translator: Ivan Bratović <ivanbratovic4@gmail.com>\n"
 "Language: hr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: app/__init__.py:22
+#: app/__init__.py:23
 msgid "Please log in to access this page."
 msgstr "Prijavite se kako biste pristupili ovoj stranici."
 
@@ -44,7 +44,7 @@ msgstr "Usluga Google Translate nije implementirana"
 msgid "[Flask Blog] Reset your password"
 msgstr "[Flask Blog] Ponovno postavite lozinku"
 
-#: app/auth/forms.py:11 app/auth/forms.py:18 app/main/forms.py:11
+#: app/auth/forms.py:11 app/auth/forms.py:18 app/main/forms.py:12
 msgid "Username"
 msgstr "Korisničko ime"
 
@@ -73,7 +73,7 @@ msgstr "Ponovite lozinku"
 msgid "Register"
 msgstr "Registriraj se"
 
-#: app/auth/forms.py:29 app/main/forms.py:25
+#: app/auth/forms.py:29 app/main/forms.py:26
 msgid "Please use a different username."
 msgstr "Koristite neko drugo korisničko ime."
 
@@ -151,61 +151,65 @@ msgstr "Došlo je do neočekivane pogreške"
 msgid "The administrator has been notified. Sorry for the inconvenience!"
 msgstr "Administrator je obaviješten. Ispričavamo se zbog neugodnosti!"
 
-#: app/main/forms.py:12
+#: app/main/forms.py:13
 msgid "About me"
 msgstr "O meni"
 
-#: app/main/forms.py:13
+#: app/main/forms.py:14
 msgid "Update profile"
 msgstr "Ažuriraj profil"
 
-#: app/main/forms.py:30
+#: app/main/forms.py:31
 msgid "What's on your mind?"
 msgstr "Što ti je na pameti?"
 
-#: app/main/forms.py:32
+#: app/main/forms.py:33
 msgid "Publish post"
 msgstr "Objavi"
 
-#: app/main/routes.py:35
+#: app/main/forms.py:37 app/main/routes.py:186
+msgid "Search"
+msgstr "Pretraga"
+
+#: app/main/routes.py:36
 msgid "Your post is now live!"
 msgstr "Vaša objava je sada aktivna!"
 
-#: app/main/routes.py:51 app/templates/base.html:27
+#: app/main/routes.py:52 app/templates/base.html:27
 msgid "Home"
 msgstr "Početna stranica"
 
-#: app/main/routes.py:72 app/templates/base.html:30
+#: app/main/routes.py:73 app/templates/base.html:30
 msgid "Explore"
 msgstr "Istraži"
 
-#: app/main/routes.py:118
+#: app/main/routes.py:119
 msgid "User profile updated successfully."
 msgstr "Korisnički profil je uspješno ažuriran."
 
-#: app/main/routes.py:123 app/templates/edit_profile.html:5
+#: app/main/routes.py:124 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "Uredi profil"
 
-#: app/main/routes.py:133 app/main/routes.py:152
+#: app/main/routes.py:134 app/main/routes.py:153
 #, python-format
 msgid "User %(username)s not found."
 msgstr "Korisnik %(username)s nije pronađen."
 
-#: app/main/routes.py:136
+#: app/main/routes.py:137
 msgid "You cannot follow yourself!"
 msgstr "Ne možete pratiti sebe!"
 
-#: app/main/routes.py:140
+#: app/main/routes.py:141
 #, fuzzy, python-format
 msgid "You are following %(username)s!"
 msgstr "Sada pratite korisnika %(username)s!"
 
-#: app/main/routes.py:155
+#: app/main/routes.py:156
 msgid "You cannot unfollow yourself!"
 msgstr "Ne možete prestati pratiti sebe!"
 
-#: app/main/routes.py:159
+#: app/main/routes.py:160
 #, python-format
 msgid "You unfollowed %(username)s."
 msgstr "Prestali ste pratiti korisnika %(username)s."
@@ -223,15 +227,15 @@ msgstr "Prevedi"
 msgid "Welcome to My Blog"
 msgstr "Dobrodošli na moj blog"
 
-#: app/templates/base.html:36
+#: app/templates/base.html:44
 msgid "Login"
 msgstr "Prijava"
 
-#: app/templates/base.html:40
+#: app/templates/base.html:48
 msgid "Profile"
 msgstr "Profil"
 
-#: app/templates/base.html:43
+#: app/templates/base.html:51
 msgid "Logout"
 msgstr "Odjavi se"
 
@@ -240,13 +244,19 @@ msgstr "Odjavi se"
 msgid "Hi, %(username)s!"
 msgstr "Bok, %(username)s!"
 
-#: app/templates/index.html:18 app/templates/user.html:41
+#: app/templates/index.html:18 app/templates/search.html:12
+#: app/templates/user.html:41
 msgid "Newer posts"
 msgstr "Novije objave"
 
-#: app/templates/index.html:23 app/templates/user.html:46
+#: app/templates/index.html:23 app/templates/search.html:17
+#: app/templates/user.html:46
 msgid "Older posts"
 msgstr "Starije objave"
+
+#: app/templates/search.html:4
+msgid "Search Results"
+msgstr "Rezultati pretrage"
 
 #: app/templates/user.html:8
 msgid "User"

@@ -7,7 +7,7 @@ from flask_babel import _, get_locale
 from app import db
 from app.models import Post, User
 from app.translate import translate
-from app.main.forms import EditProfileForm, PostForm, EmptyForm
+from app.main.forms import EditProfileForm, PostForm, SearchForm, EmptyForm
 from app.main import bp
 
 
@@ -16,6 +16,7 @@ def before_request():
     if current_user.is_authenticated:
         current_user.last_seen = datetime.now(tz=timezone.utc)
         db.session.commit()
+        g.search_form = SearchForm()
     g.locale = str(get_locale())
 
 
@@ -166,3 +167,20 @@ def unfollow(username):
 def translate_text():
     data = request.get_json()
     return {"text": translate(data["text"], data["src_language"], data["dst_language"])}
+
+
+@bp.route("/search")
+@login_required
+def search():
+    if not g.search_form.validate():
+        return redirect(url_for("main.explore"))
+    page = request.args.get("page", 1, type=int)
+    query = g.search_form.q.data
+    posts, total = Post.search(query, page, current_app.config["POSTS_PER_PAGE"])
+    next_url = None
+    prev_url = None
+    if total > page * current_app.config["POSTS_PER_PAGE"]:
+        next_url = url_for("main.search", q=query, page=page + 1)
+    if page > 1:
+        prev_url = url_for("main.search", q=query, page=page - 1)
+    return render_template("search.html", title=_("Search"), posts=posts, next_url=next_url, prev_url=prev_url)

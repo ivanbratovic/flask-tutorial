@@ -10,6 +10,7 @@ class Config:
     SQLALCHEMY_DATABASE_URI = os.environ.get(
         "DATABASE_URL"
     ) or "sqlite:///" + os.path.join(basedir, "app.db")
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
     POSTS_PER_PAGE = 25
     LANGUAGES = ["en", "hr"]
     MS_TRANSLATOR_KEY = os.environ.get("MS_TRANSLATOR_KEY") or ""
