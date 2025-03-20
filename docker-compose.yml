@@ -1,0 +1,28 @@
+services:
+  app:
+    build: .
+    image: blog:latest
+    container_name: blog_app
+    ports:
+      - 8080:5000
+    environment:
+      - ELASTICSEARCH_URL=http://blog_elasticsearch:9200/
+      - DATABASE_URL=mysql+pymysql://blog:$MYSQL_PASSWORD@blog_mysql/blog
+  mysql:
+    container_name: blog_mysql
+    image: mysql:latest
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_DATABASE=blog
+      - MYSQL_USER=blog
+      - MYSQL_PASSWORD=$MYSQL_PASSWORD
+  elastic:
+    container_name: blog_elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.17.0
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+
+networks:
+  default:
+    name: blog_network
